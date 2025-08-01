@@ -4,7 +4,7 @@ import { CommentInfo } from '../CommentInfo/CommentInfo';
 export const CommentList = ({ comments }) => {
   return (
     <div className="CommentList">
-      {comments.length > 0 ? (
+      {comments && comments.length > 0 ? (
         comments.map(comment => (
           <CommentInfo comment={comment} key={comment.id} />
         ))
